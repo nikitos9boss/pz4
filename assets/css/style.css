@@ -1,4 +1,234 @@
 body {
     font-family: 'Ubuntu', sans-serif;
  }
+ .header {
+    width: 100%; /* ширина буде у всю ширину батьківського елементу */
+    max-width: 1180px; /* максимальна ширина */
+    margin: 0 auto; /* для розміщення по центру */
+    margin-top: 30px;
+    display: flex; /* буде контейнером для всіх елементів шапки */
+    justify-content: space-between; /* рівномірно розподіляє всі елементи по ширині flex-блоку. Перший елемент спочатку, останній в кінці(дивимось підказку по flexbox з лекції)*/
+    align-items: center; /* вирівнюємо елементу за центром */
+    box-sizing: border-box; /* ширина border не додається в ширину елементу */
+      }
+.nav{
+    display: flex;
+    list-style-type: none; /* прибираємо вигляд списку за замовчування */
+    justify-content: flex-start;
+    font-size: 14px; 
+    align-items: center;
+}
+ 
+ .nav>li{
+        margin-left: 15px; /* всім дочірнім елементам класу nav відступ праворуч 15px*/
+}
+
+.nav>li>a{
+text-decoration: none;
+color: #202020;
+font-weight: 700;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+ }
+ .logo img {
+    display: block;
+    width: 100px;
+    height: 100px;
+ }
+ 
+ .logo span {
+    font-size: 24px;
+    color: #202020;
+    font-weight: 700;
+ }
+ .nav .button {
+    background: #5B9AFF/*колір фону*/;
+    border-radius:  5px/*радіус*/;
+    color: white/*колір шрифта*/;
+    font-weight: 700/**/;
+    padding: 5px 15px;
+    border: none;
+ }
+ .page-top {
+    border-top: 1px solid #C2C2C2;
+ }
+ .page{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+ }
+ .page h2 {
+   position: absolute;
+   color: #C2C2C2;
+   background-color: white;
+   font-size: .9rem;
+   padding: .5rem 2rem;
+   top: -6%;
+   font-weight: 300;
+}
+.page .button{
+   background: #5B9AFF;
+   border-radius: 10px;
+   width: 180px;
+   height: 47px;
+   color: white;
+   padding: 50% - 180px/2 - 501px;
+   font-weight: normal;
+   font-size: 24px;
+   border: 1px;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   }
+   .page h1 {
+      
+      color: #202020;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 55px;
+   
+   }
+      .page .hero-text{
+    width: 741px;
+    font-size: 32px;
+      color: #4F4F4F;
+      font-weight: normal;
+      line-height: 51px;/* висота міжрядкового інтервалу, беремо з фігми*/
+    }
+      
+ 
+ .wrap{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    box-sizing: border-box;
+ }
+ .img.text h3{
+    color: black;
+    font-weight: normal;
+      font-size: 50px;
+      line-height: 25px;
+ }
+ .img.page-top.hero-text2{
+   font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+
+color: #B2B2B2;
+ }
+ .departments{
+   display: grid;
+   grid-template-rows: 50% 50%;
+   grid-template-columns: 50% 50%;
+   grid-row-gap: 20px; /*простір між рядками*/
+}
+.dep-item {
+   display: flex;
+   justify-content: flex-start;
+ align-items: center;
+}
+.dep-item .img{
+   flex-basis: 140px; /* базовий розмір флекс елементу */
+   text-align: center;
+}
+.dep-item .text{
+   flex-basis: calc(100% - 170px); /* розміри в css можна обчислювати за допомоги функцій calc*/
+}
+.page-down {
+   border-top: 1px solid #C2C2C2;
+}
+.wrapper h2 {
+   position: absolute;
+   color: #C2C2C2;
+   background-color: white;
+   font-size: .9rem;
+   padding: .5rem 2rem;
+   top: -5%;
+   font-weight: 300;
+ }
+ .wrapper .professors {
+   display: grid;
+   grid-template-rows:40% 40%;
+   grid-template-columns:30% 30% 30%;
+   grid-row-gap: 1px; /*простір між рядками*/
+ }
+ 
+ .wrapper .professors .professors__card {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   max-width: 400px;
+   margin: 1.5rem 0rem;
+ }
+ 
+ .wrapper .professors .professors__card .text h3, .wrapper .professors .professors__card .text p {
+   padding: .4rem 1rem;
+ }
+ 
+ .wrapper .professors .professors__card .text h3 {
+   font-size: 1.4rem;
+   color: #202020;
+   font-weight: bold;
+ }
+ 
+ .wrapper .professors .professors__card .text p {
+   font-size: .9rem;
+   color: #4F4F4F;
+   font-weight: normal;
+ }
+ 
+ footer {
+   width: 100%;
+   background-color: #F7F7F7;
+   padding: 1rem 3rem;
+ }
+ 
+ footer .wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+ }
+ 
+ footer .wrapper ul {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+ }
+ 
+ footer .wrapper ul li {
+   padding: 0rem 1rem;
+ }
+.social{
+   display: flex;
+   list-style-type: none;
+}
+.social li{
+   margin-right: 20px;
+}
+.social a{
+   text-decoration: none;
+   color: #B2B2B2;
+   font-size: 24px;
+}
+
+ 
  
